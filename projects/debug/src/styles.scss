@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+@include mat-core();
+
+// hue. Available color palettes: https://material.io/design/color/
+$angular-material-primary: mat-palette($mat-blue, 600);
+$angular-material-accent: mat-palette($mat-blue, 900);
+$angular-material-warn: mat-palette($mat-red);
+$angular-material-theme: mat-light-theme($angular-material-primary, $angular-material-accent, $angular-material-warn);
+@include angular-material-theme($angular-material-theme);
+// @include mat-tabs-theme(mat-light-theme(mat-palette($mat-gray, 50), $angular-material-accent, $angular-material-warn));
+// $custom-typography: mat-typography-config(
+//   $font-family: "Roboto, Arial, sans-serif",
+//   $headline: mat-typography-level(32px, 48px, 700),
+//   $body-1: mat-typography-level(16px, 24px, 500)
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}

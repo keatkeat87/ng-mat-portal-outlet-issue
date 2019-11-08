@@ -1,0 +1,36 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types",
+      "./typings.d.ts"
+    ],
+    "lib": [
+      "es2018", // 之前我都是用旧的 es2015, 但 ng9 之后就再尝试看看能不能直接用新的咯
+      "dom"
+    ],
+    "paths": {
+      "stooges": [
+        "dist/stooges"
+      ],
+      "stooges/*": [
+        "dist/stooges/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true // for import moment + ivy
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

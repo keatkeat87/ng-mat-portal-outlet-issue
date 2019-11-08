@@ -1,0 +1,29 @@
+<div>
+  container area
+  <ng-container #container ></ng-container>
+</div>
+<br>
+<div>
+  outlet area
+ <ng-template cdkPortalOutlet ></ng-template>
+</div>
+<br>
+<div>
+  dom portal outlet area
+  <div #domOutlet ></div>
+</div>
+<ng-template #dymanicTemplate >
+  dynamic template content
+</ng-template>
+
+<button (click)="click1()" >append dynamic component to outlet with view container ref</button>
+<br>
+<button (click)="click2()" > append dynamic component to outlet without view container ref</button>
+<br>
+<button (click)="click3()" >append dynamic template to outlet with view container ref</button>
+<br>
+<button (click)="click4()" >append dynamic template to outlet without view container ref</button>
+<br>
+<button (click)="click5()" >append dynamic component to dom outlet with view container ref</button>
+<br>
+<button (click)="click6()" > append dynamic component to dom outlet without view container ref</button>
